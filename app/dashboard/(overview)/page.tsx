@@ -8,12 +8,17 @@ import {
   LatestInvoicesSkeleton,
   CardsSkeleton,
 } from '@/app/ui/skeletons';
+import { Metadata } from 'next';
 // import { Card } from '@/app/ui/dashboard/cards';
 // import
 // fetchRevenue,
 // fetchLatestInvoices,
 // fetchCardData,
 // '@/app/lib/data';
+
+export const metadata: Metadata = {
+  title: 'Dashboard',
+};
 
 export default async function Page() {
   // const revenue = await fetchRevenue();

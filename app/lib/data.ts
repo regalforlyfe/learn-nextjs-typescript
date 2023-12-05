@@ -188,6 +188,7 @@ export async function fetchCustomers() {
     `;
 
     const customers = data.rows;
+
     return customers;
   } catch (err) {
     console.error('Database Error:', err);
@@ -233,6 +234,7 @@ export async function getUser(email: string) {
   noStore();
   try {
     const user = await sql`SELECT * FROM users WHERE email=${email}`;
+
     return user.rows[0] as User;
   } catch (error) {
     console.error('Failed to fetch user:', error);
